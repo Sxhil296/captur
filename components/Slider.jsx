@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { SliderData } from './SliderData';
-import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
+import { FcPrevious, FcNext } from 'react-icons/fc';
 
 const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -33,7 +33,7 @@ const Slider = ({ slides }) => {
                 : 'opacity-0'
             }
           >
-              <FaArrowCircleLeft
+              <FcPrevious
                 onClick={prevSlide}
                 className='absolute top-[50%] left-[30px] text-white/70 cursor-pointer select-none z-[2]'
                 size={50}
@@ -47,7 +47,7 @@ const Slider = ({ slides }) => {
                   objectFit='cover'
                 />
               )}
-              <FaArrowCircleRight
+              <FcNext
                 onClick={nextSlide}
                 className='absolute top-[50%] right-[30px] text-white/70 cursor-pointer select-none z-[2]'
                 size={50}
